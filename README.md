@@ -45,4 +45,4 @@ GitHub Pages deployments use `/tambola-royale/` as the base path when `GITHUB_AC
 
 ## GitHub Pages
 
-The included [deployment workflow](.github/workflows/deploy.yml) publishes every push to `main` or `master`. In GitHub repository settings, set **Pages** to **GitHub Actions**, then push the project to the branch that your repository uses as its default branch. The Vite base path is derived from the repository name automatically; set `VITE_BASE_PATH` only when deploying under a custom subpath.
+The included [deployment workflow](.github/workflows/deploy.yml) publishes every push to `main` or `master` by pushing the built Vite output to a `gh-pages` branch. In GitHub repository settings, set **Pages** to **Deploy from a branch**, choose the `gh-pages` branch, and use the `/root` folder. The Vite base path is derived from the repository name automatically; set `VITE_BASE_PATH` only when deploying under a custom subpath.
