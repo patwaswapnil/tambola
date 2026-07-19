@@ -1,0 +1,9 @@
+.controls { display: grid; grid-template-columns: minmax(7.8rem, 0.85fr) minmax(12rem, 1.6fr) auto; gap: 0.65rem; align-items: stretch; }
+.controls button { min-height: clamp(3.25rem, 5vw, 4.35rem); border: 0; border-radius: 0.9rem; cursor: pointer; font: inherit; font-size: clamp(0.85rem, 1.25vw, 1.1rem); font-weight: 800; transition: transform 160ms ease, filter 160ms ease, box-shadow 160ms ease; }
+.controls button:focus-visible { outline: 4px solid #fff; outline-offset: 3px; }
+.controls button:hover:not(:disabled) { filter: brightness(1.1); transform: translateY(-1px); }
+.secondaryButton { display: inline-flex; align-items: center; justify-content: center; gap: 0.45rem; background: #353b63; color: #f1f2f9; }
+.nextButton { display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem; background: linear-gradient(135deg, #ffdc79, #ee9c28); color: #1c1002; box-shadow: 0 0.45rem 1.4rem rgb(250 166 36 / 28%); font-size: clamp(1rem, 1.55vw, 1.35rem) !important; }
+.nextButton:disabled { cursor: not-allowed; opacity: 0.5; }
+.iconButton { width: clamp(3.25rem, 5vw, 4.35rem); background: #282d52; color: #eef0ff; }
+@media (max-width: 520px) { .controls { grid-template-columns: 1fr auto; } .nextButton { grid-row: 1; grid-column: 1 / -1; } .secondaryButton { grid-row: 2; } .iconButton { grid-row: 2; grid-column: 2; } }
