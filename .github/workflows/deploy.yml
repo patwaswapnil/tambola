@@ -26,6 +26,8 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
           publish_dir: ./dist
           enable_jekyll: false
           force_orphan: true
+          full_commit_message: Deploy to GitHub Pages
